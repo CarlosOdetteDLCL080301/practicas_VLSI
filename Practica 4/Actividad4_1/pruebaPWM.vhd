@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 entity pruebaPWM is
 	Port(
 		clk:in std_logic;
-		duty:in std_logic_vector(3 downto 0);
+		duty:in std_logic_vector(3 downto 0):="0111";
 		snl:out std_logic:='0'
 	);
 end entity;
