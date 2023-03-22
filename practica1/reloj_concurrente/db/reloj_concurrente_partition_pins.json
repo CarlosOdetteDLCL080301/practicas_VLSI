@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "display_minutos_unidad[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_unidad[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_unidad[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_unidad[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_unidad[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_unidad[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_unidad[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_minutos_decena[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_unidad[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_hora_decena[6]",
+					"strict" : false
+				},
+				{
+					"name" : "carry_minutos_decena",
+					"strict" : false
+				},
+				{
+					"name" : "carry_hora_unidad",
+					"strict" : false
+				},
+				{
+					"name" : "carry_hora_decena",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,4 @@
+library ieee;
+use iee.std_logic_1164.all;
+use iee.std_logic_unsigned.all
+entity mux_2x1

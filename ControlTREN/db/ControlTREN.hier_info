@@ -1,0 +1,43 @@
+|states
+clk => clkl.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+estacion => estado_siguiente.DATAB
+estacion => alto2.DATAB
+alto => alto2.OUTPUTSELECT
+alto => alto1.OUTPUTSELECT
+alto => izquierda.IN0
+emergencia => alto1.DATAA
+emergencia => alto2.DATAA
+emergencia => izquierda.IN1
+direccion => izquierda$latch.DATAIN
+direccion => derecha$latch.DATAIN
+alto2 << alto2.DB_MAX_OUTPUT_PORT_TYPE
+alto1 << alto1.DB_MAX_OUTPUT_PORT_TYPE
+izquierda << izquierda$latch.DB_MAX_OUTPUT_PORT_TYPE
+derecha << derecha$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

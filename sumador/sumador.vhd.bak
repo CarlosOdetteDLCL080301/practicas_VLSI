@@ -1,0 +1,21 @@
+--sumador
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_ARITH.all;
+use ieee.std_logic_UNSIGNED.all;
+
+entity sumador is
+	port(
+		a,b2		:	in		std_logic_vector(7 downto 0);
+		cin		:	in		std_logic;
+		salsum	:	out	std_logic_vector(7 downto 0);
+	);
+	end sumador;
+	
+architecture arq_sumador of sumador is
+	signal mid	:	std_logic_vector(7 downto 0);
+	begin
+		mid		<=	('0' & a) + ('0' &b2) + cin;
+		cout		<=	mid(8);
+		salsum	<= mid(7 downto 0);
+	end arq_sumador;

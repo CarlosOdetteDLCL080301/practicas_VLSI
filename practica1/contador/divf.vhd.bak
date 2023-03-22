@@ -1,0 +1,9 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity divf is
+	port(
+		clk	:	in			std_logic;
+		clkl	:	buffer	std_logic:	=	'0'
+	);
+end entity;

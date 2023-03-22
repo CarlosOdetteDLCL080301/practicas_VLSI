@@ -1,0 +1,180 @@
+|ALU
+clk => automatizacion:U0.clk
+a[0] => al:u1.a[0]
+a[0] => ul:u2.a[0]
+a[1] => al:u1.a[1]
+a[1] => ul:u2.a[1]
+a[2] => al:u1.a[2]
+a[2] => ul:u2.a[2]
+b[0] => al:u1.b[0]
+b[0] => ul:u2.b[0]
+b[1] => al:u1.b[1]
+b[1] => ul:u2.b[1]
+b[2] => al:u1.b[2]
+b[2] => ul:u2.b[2]
+stop => automatizacion:U0.stop
+reset => automatizacion:U0.reset
+salida_final[0] <= mux_2x1:u3.salida_mux_2x1[0]
+salida_final[1] <= mux_2x1:u3.salida_mux_2x1[1]
+salida_final[2] <= mux_2x1:u3.salida_mux_2x1[2]
+cout <= al:u1.cout
+
+
+|ALU|automatizacion:U0
+clk => clkl.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => contador[19].CLK
+clk => contador[20].CLK
+clk => contador[21].CLK
+clk => contador[22].CLK
+clk => contador[23].CLK
+clk => contador[24].CLK
+stop => contador[24].ENA
+stop => contador[23].ENA
+stop => contador[22].ENA
+stop => contador[21].ENA
+stop => contador[20].ENA
+stop => contador[19].ENA
+stop => contador[18].ENA
+stop => contador[17].ENA
+stop => contador[16].ENA
+stop => contador[15].ENA
+stop => contador[14].ENA
+stop => contador[13].ENA
+stop => contador[12].ENA
+stop => contador[11].ENA
+stop => contador[10].ENA
+stop => contador[9].ENA
+stop => contador[8].ENA
+stop => contador[7].ENA
+stop => contador[6].ENA
+stop => contador[5].ENA
+stop => contador[4].ENA
+stop => contador[3].ENA
+stop => contador[2].ENA
+stop => contador[1].ENA
+stop => contador[0].ENA
+stop => clkl.ENA
+reset => process_1.IN1
+bit3 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bit2 <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+bit1 <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+bit0 <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AL:u1
+esUA => sumador_restador:u2.esUA
+a[0] => sumador_restador:u2.a[0]
+a[1] => sumador_restador:u2.a[1]
+a[2] => sumador_restador:u2.a[2]
+b[0] => mux_4x1:u1.b[0]
+b[1] => mux_4x1:u1.b[1]
+b[2] => mux_4x1:u1.b[2]
+sel[0] => mux_4x1:u1.sel[0]
+sel[1] => mux_4x1:u1.sel[1]
+cin => sumador_restador:u2.cin
+sal[0] <= sumador_restador:u2.salsum[0]
+sal[1] <= sumador_restador:u2.salsum[1]
+sal[2] <= sumador_restador:u2.salsum[2]
+cout <= sumador_restador:u2.cout
+
+
+|ALU|AL:u1|mux_4x1:u1
+b[0] => Mux2.IN3
+b[0] => Mux2.IN2
+b[1] => Mux1.IN3
+b[1] => Mux1.IN2
+b[2] => Mux0.IN3
+b[2] => Mux0.IN2
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+sal_mux[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sal_mux[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sal_mux[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|AL:u1|sumador_restador:u2
+esUA => cout.OUTPUTSELECT
+a[0] => Add0.IN3
+a[1] => Add0.IN2
+a[2] => Add0.IN1
+b[0] => Add0.IN6
+b[1] => Add0.IN5
+b[2] => Add0.IN4
+cin => Add1.IN8
+salsum[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|UL:u2
+a[0] => sal_mux.IN0
+a[0] => sal_mux.IN0
+a[0] => sal_mux.IN0
+a[0] => Mux2.IN3
+a[1] => sal_mux.IN0
+a[1] => sal_mux.IN0
+a[1] => sal_mux.IN0
+a[1] => Mux1.IN3
+a[2] => sal_mux.IN0
+a[2] => sal_mux.IN0
+a[2] => sal_mux.IN0
+a[2] => Mux0.IN3
+b[0] => sal_mux.IN1
+b[0] => sal_mux.IN1
+b[0] => sal_mux.IN1
+b[1] => sal_mux.IN1
+b[1] => sal_mux.IN1
+b[1] => sal_mux.IN1
+b[2] => sal_mux.IN1
+b[2] => sal_mux.IN1
+b[2] => sal_mux.IN1
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[0] => Mux2.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+sel[1] => Mux2.IN4
+sal_mux[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+sal_mux[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+sal_mux[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_2x1:u3
+sel => salida_mux_2x1.OUTPUTSELECT
+sel => salida_mux_2x1.OUTPUTSELECT
+sel => salida_mux_2x1.OUTPUTSELECT
+a[0] => salida_mux_2x1.DATAB
+a[1] => salida_mux_2x1.DATAB
+a[2] => salida_mux_2x1.DATAB
+b[0] => salida_mux_2x1.DATAA
+b[1] => salida_mux_2x1.DATAA
+b[2] => salida_mux_2x1.DATAA
+salida_mux_2x1[0] <= salida_mux_2x1.DB_MAX_OUTPUT_PORT_TYPE
+salida_mux_2x1[1] <= salida_mux_2x1.DB_MAX_OUTPUT_PORT_TYPE
+salida_mux_2x1[2] <= salida_mux_2x1.DB_MAX_OUTPUT_PORT_TYPE
+
+

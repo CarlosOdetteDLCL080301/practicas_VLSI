@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ALU is
+	port(
+		
+	);
+end ALU;
+
+architecture arq_ALU of ALU is
+	begin
+		entity work.UA(arq_UA) port map();
+		entity work.UL(arq_UL) port map();
+end architecture arq_ALU;

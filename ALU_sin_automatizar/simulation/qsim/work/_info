@@ -1,0 +1,229 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Users/Carlos Odettte DLCL/Documentos/VLSI/ALU_sin_automatizar/simulation/qsim
+Eal
+Z1 w1678030087
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+R0
+Z8 8ALU_sin_automatizar.vho
+Z9 FALU_sin_automatizar.vho
+l0
+L88
+VefZY2MLn9gfVg3RaO8P?W1
+!s100 7oRBh9fXb2f<c4CES^N:B1
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1678030087
+!i10b 1
+Z12 !s108 1678030087.000000
+Z13 !s90 -work|work|ALU_sin_automatizar.vho|
+Z14 !s107 ALU_sin_automatizar.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 2 al 0 22 efZY2MLn9gfVg3RaO8P?W1
+l169
+L115
+VJl[hVI?bjBY8CMmKi7UAi0
+!s100 YoT6kkCGfiFX1QSMC7UTg0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eal_vhd_vec_tst
+Z17 w1678030085
+R5
+R6
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+L31
+V[8Ti=Pn>S@Rf1J6Ni<7EN3
+!s100 e_P6fC:SQagm7RKjbSKA81
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform.vwf.vht|
+Z21 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Aal_arch
+R5
+R6
+DEx4 work 14 al_vhd_vec_tst 0 22 [8Ti=Pn>S@Rf1J6Ni<7EN3
+l52
+L33
+VKAUA]7L3<X`OLf@YcQi4[2
+!s100 3LA2zXEm3zV^8@ZYQhlG?0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
+Ealu
+Z22 w1678042168
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L88
+V`1CY1FDETWMD[2coOAVUV2
+!s100 GdzMkQ?UnYi<fNXCNP7o41
+R10
+32
+Z23 !s110 1678042169
+!i10b 1
+Z24 !s108 1678042169.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 3 alu 0 22 `1CY1FDETWMD[2coOAVUV2
+l179
+L117
+V`n8>HEAnmIRo6OFWBb_^B3
+!s100 W1glBnDX_TA^<^ZfV4WcE0
+R10
+32
+R23
+!i10b 1
+R24
+R13
+R14
+!i113 1
+R15
+R16
+Ealu_vhd_vec_tst
+Z25 w1678042167
+R5
+R6
+R0
+Z26 8Waveform4.vwf.vht
+Z27 FWaveform4.vwf.vht
+l0
+L31
+VM9g^YfSDOcSm9VVBlhjI60
+!s100 e_jiJ7a9ecH56?Rk3`[>[2
+R10
+32
+R23
+!i10b 1
+R24
+Z28 !s90 -work|work|Waveform4.vwf.vht|
+Z29 !s107 Waveform4.vwf.vht|
+!i113 1
+R15
+R16
+Aalu_arch
+R5
+R6
+Z30 DEx4 work 15 alu_vhd_vec_tst 0 22 M9g^YfSDOcSm9VVBlhjI60
+l54
+L33
+VBHE7JEhCHee[?V49F9B^53
+!s100 ;;Cb=[:K]Sf1S_NMSEPl61
+R10
+32
+R23
+!i10b 1
+R24
+R28
+R29
+!i113 1
+R15
+R16
+Ehard_block
+R22
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+R8
+R9
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+R10
+32
+R23
+!i10b 1
+R24
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R10
+32
+R23
+!i10b 1
+R24
+R13
+R14
+!i113 1
+R15
+R16

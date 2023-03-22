@@ -1,0 +1,77 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity automatizacion is
+	port(
+		clk:in std_logic;
+		bit2:out std_logic;
+		bit1:out std_logic;
+		bit0:out std_logic;
+	);
+end automatizacion;
+
+architecture arq_automatizacion of automatizacion is
+	signal clkl:std_logic;
+	begin
+	--Divisor de tiempo
+	process(clk)--entrada
+		begin
+			if(rising_edge(clk)) then
+				--if(contador=25000000) then
+				if(contador=500000) then
+					contador<=0;
+					clkl		<=	not clkl;--salida
+				else
+					contador	<=	contador	+	1;
+				end if;
+			end if;
+	end process;
+	
+	--Contador
+	process(clkl)
+		begin
+			if(rising_edge(clkl)) then
+				if(conteo=7) then
+					conteo <= 0;
+				else
+					conteo <= conteo + 1;
+				end if;
+			end if;
+	end process;
+	
+	
+	--salidas para display
+	with conteo select
+	bit2	<=	'0' when	0,
+				'0' when	1,
+				'0' when	2,
+				'0' when	3,
+				'1' when	4,
+				'1' when	5,
+				'1' when	6,
+				'1' when	7,
+				'0' when	others;
+				
+	with conteo select
+	bit1	<=	'0' when	0,
+				'0' when	1,
+				'1' when	2,
+				'1' when	3,
+				'0' when	4,
+				'0' when	5,
+				'1' when	6,
+				'1' when	7,
+				'0' when	others;
+				
+	with conteo select
+	bit0	<=	'0' when	0,
+				'1' when	1,
+				'0' when	2,
+				'1' when	3,
+				'0' when	4,
+				'1' when	5,
+				'0' when	6,
+				'1' when	7,
+				'0' when	others;
+				
+	

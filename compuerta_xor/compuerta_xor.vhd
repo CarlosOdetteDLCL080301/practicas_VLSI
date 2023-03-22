@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Declaración de la entidad
+entity compuerta_xor is
+  port (a : in std_logic;  -- Entrada A
+        b : in std_logic;  -- Entrada B
+        y : out std_logic  -- Salida Y
+       );
+end compuerta_xor;
+
+-- Arquitectura de la entidad
+architecture behavior of compuerta_xor is
+begin
+  -- Implementación de la compuerta XOR utilizando operador "^"
+  y <= a xor b;
+end behavior;

@@ -1,0 +1,29 @@
+|sumador
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+a[4] => Add0.IN4
+a[5] => Add0.IN3
+a[6] => Add0.IN2
+a[7] => Add0.IN1
+b2[0] => Add0.IN16
+b2[1] => Add0.IN15
+b2[2] => Add0.IN14
+b2[3] => Add0.IN13
+b2[4] => Add0.IN12
+b2[5] => Add0.IN11
+b2[6] => Add0.IN10
+b2[7] => Add0.IN9
+cin => Add1.IN18
+salsum[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[5] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[6] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+salsum[7] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
