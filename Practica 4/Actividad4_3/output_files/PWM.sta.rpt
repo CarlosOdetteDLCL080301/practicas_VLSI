@@ -1,5 +1,5 @@
 Timing Analyzer report for PWM
-Sat Mar 25 16:33:02 2023
+Sat Mar 25 17:01:51 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -89,12 +89,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.18        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.7%      ;
+;     Processor 2            ;   6.1%      ;
+;     Processor 3            ;   6.1%      ;
+;     Processor 4            ;   5.9%      ;
 +----------------------------+-------------+
 
 
@@ -105,6 +107,14 @@ refer to the applicable agreement for further details.
 +----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
 ; clk            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }            ;
 ; divf:u1_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u1_1|clkl } ;
+; divf:u2_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u2_1|clkl } ;
+; divf:u3_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u3_1|clkl } ;
+; divf:u4_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u4_1|clkl } ;
+; divf:u5_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u5_1|clkl } ;
+; divf:u6_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u6_1|clkl } ;
+; divf:u7_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u7_1|clkl } ;
+; divf:u8_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u8_1|clkl } ;
+; divf:u9_1|clkl ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divf:u9_1|clkl } ;
 +----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------+
 
 
@@ -113,8 +123,16 @@ refer to the applicable agreement for further details.
 +------------+-----------------+----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name     ; Note ;
 +------------+-----------------+----------------+------+
-; 220.02 MHz ; 220.02 MHz      ; clk            ;      ;
-; 364.7 MHz  ; 364.7 MHz       ; divf:u1_1|clkl ;      ;
+; 163.24 MHz ; 163.24 MHz      ; clk            ;      ;
+; 326.05 MHz ; 326.05 MHz      ; divf:u4_1|clkl ;      ;
+; 328.62 MHz ; 328.62 MHz      ; divf:u7_1|clkl ;      ;
+; 345.9 MHz  ; 345.9 MHz       ; divf:u2_1|clkl ;      ;
+; 347.58 MHz ; 347.58 MHz      ; divf:u3_1|clkl ;      ;
+; 347.58 MHz ; 347.58 MHz      ; divf:u9_1|clkl ;      ;
+; 348.19 MHz ; 348.19 MHz      ; divf:u6_1|clkl ;      ;
+; 356.38 MHz ; 356.38 MHz      ; divf:u1_1|clkl ;      ;
+; 357.78 MHz ; 357.78 MHz      ; divf:u8_1|clkl ;      ;
+; 364.96 MHz ; 364.96 MHz      ; divf:u5_1|clkl ;      ;
 +------------+-----------------+----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -124,8 +142,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------+--------+---------------+
 ; Clock          ; Slack  ; End Point TNS ;
 +----------------+--------+---------------+
-; clk            ; -3.545 ; -14.692       ;
-; divf:u1_1|clkl ; -1.742 ; -23.622       ;
+; clk            ; -5.126 ; -492.096      ;
+; divf:u4_1|clkl ; -2.067 ; -16.466       ;
+; divf:u7_1|clkl ; -2.043 ; -15.824       ;
+; divf:u2_1|clkl ; -1.891 ; -15.653       ;
+; divf:u3_1|clkl ; -1.877 ; -15.929       ;
+; divf:u9_1|clkl ; -1.877 ; -15.202       ;
+; divf:u6_1|clkl ; -1.872 ; -15.407       ;
+; divf:u1_1|clkl ; -1.806 ; -15.417       ;
+; divf:u8_1|clkl ; -1.795 ; -14.628       ;
+; divf:u5_1|clkl ; -1.740 ; -14.568       ;
 +----------------+--------+---------------+
 
 
@@ -134,8 +160,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------+-------+---------------+
 ; Clock          ; Slack ; End Point TNS ;
 +----------------+-------+---------------+
-; divf:u1_1|clkl ; 0.651 ; 0.000         ;
-; clk            ; 0.652 ; 0.000         ;
+; clk            ; 0.627 ; 0.000         ;
+; divf:u4_1|clkl ; 0.633 ; 0.000         ;
+; divf:u6_1|clkl ; 0.646 ; 0.000         ;
+; divf:u7_1|clkl ; 0.646 ; 0.000         ;
+; divf:u1_1|clkl ; 0.650 ; 0.000         ;
+; divf:u2_1|clkl ; 0.650 ; 0.000         ;
+; divf:u3_1|clkl ; 0.650 ; 0.000         ;
+; divf:u8_1|clkl ; 0.651 ; 0.000         ;
+; divf:u5_1|clkl ; 0.654 ; 0.000         ;
+; divf:u9_1|clkl ; 0.659 ; 0.000         ;
 +----------------+-------+---------------+
 
 
@@ -156,8 +190,16 @@ No paths to report.
 +----------------+--------+-------------------------+
 ; Clock          ; Slack  ; End Point TNS           ;
 +----------------+--------+-------------------------+
-; clk            ; -3.000 ; -15.627                 ;
-; divf:u1_1|clkl ; -1.403 ; -26.657                 ;
+; clk            ; -3.000 ; -342.526                ;
+; divf:u1_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u2_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u3_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u4_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u5_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u6_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u7_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u8_1|clkl ; -1.403 ; -15.433                 ;
+; divf:u9_1|clkl ; -1.403 ; -15.433                 ;
 +----------------+--------+-------------------------+
 
 
@@ -172,8 +214,16 @@ No synchronizer chains to report.
 +------------+-----------------+----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name     ; Note ;
 +------------+-----------------+----------------+------+
-; 238.32 MHz ; 238.32 MHz      ; clk            ;      ;
-; 394.79 MHz ; 394.79 MHz      ; divf:u1_1|clkl ;      ;
+; 175.87 MHz ; 175.87 MHz      ; clk            ;      ;
+; 357.65 MHz ; 357.65 MHz      ; divf:u4_1|clkl ;      ;
+; 361.27 MHz ; 361.27 MHz      ; divf:u7_1|clkl ;      ;
+; 377.93 MHz ; 377.93 MHz      ; divf:u3_1|clkl ;      ;
+; 378.36 MHz ; 378.36 MHz      ; divf:u2_1|clkl ;      ;
+; 384.32 MHz ; 384.32 MHz      ; divf:u6_1|clkl ;      ;
+; 384.91 MHz ; 384.91 MHz      ; divf:u9_1|clkl ;      ;
+; 387.3 MHz  ; 387.3 MHz       ; divf:u1_1|clkl ;      ;
+; 388.5 MHz  ; 388.5 MHz       ; divf:u8_1|clkl ;      ;
+; 399.84 MHz ; 399.84 MHz      ; divf:u5_1|clkl ;      ;
 +------------+-----------------+----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -183,8 +233,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------+--------+---------------+
 ; Clock          ; Slack  ; End Point TNS ;
 +----------------+--------+---------------+
-; clk            ; -3.196 ; -12.718       ;
-; divf:u1_1|clkl ; -1.533 ; -19.913       ;
+; clk            ; -4.686 ; -426.146      ;
+; divf:u4_1|clkl ; -1.796 ; -13.944       ;
+; divf:u7_1|clkl ; -1.768 ; -13.436       ;
+; divf:u3_1|clkl ; -1.646 ; -13.621       ;
+; divf:u2_1|clkl ; -1.643 ; -13.449       ;
+; divf:u6_1|clkl ; -1.602 ; -12.935       ;
+; divf:u9_1|clkl ; -1.598 ; -12.771       ;
+; divf:u1_1|clkl ; -1.582 ; -13.262       ;
+; divf:u8_1|clkl ; -1.574 ; -12.476       ;
+; divf:u5_1|clkl ; -1.501 ; -12.205       ;
 +----------------+--------+---------------+
 
 
@@ -193,8 +251,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------+-------+---------------+
 ; Clock          ; Slack ; End Point TNS ;
 +----------------+-------+---------------+
+; clk            ; 0.581 ; 0.000         ;
+; divf:u4_1|clkl ; 0.595 ; 0.000         ;
+; divf:u7_1|clkl ; 0.597 ; 0.000         ;
+; divf:u6_1|clkl ; 0.598 ; 0.000         ;
+; divf:u2_1|clkl ; 0.604 ; 0.000         ;
 ; divf:u1_1|clkl ; 0.605 ; 0.000         ;
-; clk            ; 0.606 ; 0.000         ;
+; divf:u3_1|clkl ; 0.605 ; 0.000         ;
+; divf:u5_1|clkl ; 0.605 ; 0.000         ;
+; divf:u8_1|clkl ; 0.605 ; 0.000         ;
+; divf:u9_1|clkl ; 0.613 ; 0.000         ;
 +----------------+-------+---------------+
 
 
@@ -215,8 +281,16 @@ No paths to report.
 +----------------+--------+------------------------+
 ; Clock          ; Slack  ; End Point TNS          ;
 +----------------+--------+------------------------+
-; clk            ; -3.000 ; -15.627                ;
-; divf:u1_1|clkl ; -1.403 ; -26.657                ;
+; clk            ; -3.000 ; -342.526               ;
+; divf:u1_1|clkl ; -1.403 ; -15.433                ;
+; divf:u2_1|clkl ; -1.403 ; -15.433                ;
+; divf:u3_1|clkl ; -1.403 ; -15.433                ;
+; divf:u4_1|clkl ; -1.403 ; -15.433                ;
+; divf:u5_1|clkl ; -1.403 ; -15.433                ;
+; divf:u6_1|clkl ; -1.403 ; -15.433                ;
+; divf:u7_1|clkl ; -1.403 ; -15.433                ;
+; divf:u8_1|clkl ; -1.403 ; -15.433                ;
+; divf:u9_1|clkl ; -1.403 ; -15.433                ;
 +----------------+--------+------------------------+
 
 
@@ -231,8 +305,16 @@ No synchronizer chains to report.
 +----------------+--------+---------------+
 ; Clock          ; Slack  ; End Point TNS ;
 +----------------+--------+---------------+
-; clk            ; -1.035 ; -1.209        ;
-; divf:u1_1|clkl ; -0.169 ; -0.552        ;
+; clk            ; -1.701 ; -69.751       ;
+; divf:u4_1|clkl ; -0.279 ; -1.263        ;
+; divf:u7_1|clkl ; -0.253 ; -0.996        ;
+; divf:u6_1|clkl ; -0.243 ; -0.976        ;
+; divf:u9_1|clkl ; -0.237 ; -0.736        ;
+; divf:u8_1|clkl ; -0.215 ; -0.739        ;
+; divf:u3_1|clkl ; -0.199 ; -0.906        ;
+; divf:u2_1|clkl ; -0.166 ; -0.707        ;
+; divf:u5_1|clkl ; -0.161 ; -0.420        ;
+; divf:u1_1|clkl ; -0.138 ; -0.608        ;
 +----------------+--------+---------------+
 
 
@@ -241,8 +323,16 @@ No synchronizer chains to report.
 +----------------+-------+---------------+
 ; Clock          ; Slack ; End Point TNS ;
 +----------------+-------+---------------+
-; clk            ; 0.251 ; 0.000         ;
-; divf:u1_1|clkl ; 0.252 ; 0.000         ;
+; clk            ; 0.242 ; 0.000         ;
+; divf:u4_1|clkl ; 0.249 ; 0.000         ;
+; divf:u1_1|clkl ; 0.251 ; 0.000         ;
+; divf:u2_1|clkl ; 0.251 ; 0.000         ;
+; divf:u7_1|clkl ; 0.251 ; 0.000         ;
+; divf:u3_1|clkl ; 0.252 ; 0.000         ;
+; divf:u6_1|clkl ; 0.252 ; 0.000         ;
+; divf:u8_1|clkl ; 0.252 ; 0.000         ;
+; divf:u5_1|clkl ; 0.254 ; 0.000         ;
+; divf:u9_1|clkl ; 0.255 ; 0.000         ;
 +----------------+-------+---------------+
 
 
@@ -263,8 +353,16 @@ No paths to report.
 +----------------+--------+------------------------+
 ; Clock          ; Slack  ; End Point TNS          ;
 +----------------+--------+------------------------+
-; clk            ; -3.000 ; -12.324                ;
-; divf:u1_1|clkl ; -1.000 ; -19.000                ;
+; clk            ; -3.000 ; -253.405               ;
+; divf:u1_1|clkl ; -1.000 ; -11.000                ;
+; divf:u2_1|clkl ; -1.000 ; -11.000                ;
+; divf:u3_1|clkl ; -1.000 ; -11.000                ;
+; divf:u4_1|clkl ; -1.000 ; -11.000                ;
+; divf:u5_1|clkl ; -1.000 ; -11.000                ;
+; divf:u6_1|clkl ; -1.000 ; -11.000                ;
+; divf:u7_1|clkl ; -1.000 ; -11.000                ;
+; divf:u8_1|clkl ; -1.000 ; -11.000                ;
+; divf:u9_1|clkl ; -1.000 ; -11.000                ;
 +----------------+--------+------------------------+
 
 
@@ -274,18 +372,34 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                           ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -3.545  ; 0.251 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -3.545  ; 0.251 ; N/A      ; N/A     ; -3.000              ;
-;  divf:u1_1|clkl  ; -1.742  ; 0.252 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS  ; -38.314 ; 0.0   ; 0.0      ; 0.0     ; -42.284             ;
-;  clk             ; -14.692 ; 0.000 ; N/A      ; N/A     ; -15.627             ;
-;  divf:u1_1|clkl  ; -23.622 ; 0.000 ; N/A      ; N/A     ; -26.657             ;
-+------------------+---------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.126   ; 0.242 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.126   ; 0.242 ; N/A      ; N/A     ; -3.000              ;
+;  divf:u1_1|clkl  ; -1.806   ; 0.251 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u2_1|clkl  ; -1.891   ; 0.251 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u3_1|clkl  ; -1.877   ; 0.252 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u4_1|clkl  ; -2.067   ; 0.249 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u5_1|clkl  ; -1.740   ; 0.254 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u6_1|clkl  ; -1.872   ; 0.252 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u7_1|clkl  ; -2.043   ; 0.251 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u8_1|clkl  ; -1.795   ; 0.252 ; N/A      ; N/A     ; -1.403              ;
+;  divf:u9_1|clkl  ; -1.877   ; 0.255 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS  ; -631.19  ; 0.0   ; 0.0      ; 0.0     ; -481.423            ;
+;  clk             ; -492.096 ; 0.000 ; N/A      ; N/A     ; -342.526            ;
+;  divf:u1_1|clkl  ; -15.417  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u2_1|clkl  ; -15.653  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u3_1|clkl  ; -15.929  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u4_1|clkl  ; -16.466  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u5_1|clkl  ; -14.568  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u6_1|clkl  ; -15.407  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u7_1|clkl  ; -15.824  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u8_1|clkl  ; -14.628  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
+;  divf:u9_1|clkl  ; -15.202  ; 0.000 ; N/A      ; N/A     ; -15.433             ;
++------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -381,9 +495,25 @@ No synchronizer chains to report.
 +----------------+----------------+----------+----------+----------+----------+
 ; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------+----------------+----------+----------+----------+----------+
-; clk            ; clk            ; 100      ; 0        ; 0        ; 0        ;
+; clk            ; clk            ; 5781     ; 0        ; 0        ; 0        ;
 ; divf:u1_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
-; divf:u1_1|clkl ; divf:u1_1|clkl ; 215      ; 0        ; 0        ; 0        ;
+; divf:u2_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u3_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u4_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u5_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u6_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u7_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u8_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u9_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u1_1|clkl ; divf:u1_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u2_1|clkl ; divf:u2_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u3_1|clkl ; divf:u3_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u4_1|clkl ; divf:u4_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u5_1|clkl ; divf:u5_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u6_1|clkl ; divf:u6_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u7_1|clkl ; divf:u7_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u8_1|clkl ; divf:u8_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u9_1|clkl ; divf:u9_1|clkl ; 135      ; 0        ; 0        ; 0        ;
 +----------------+----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -393,9 +523,25 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------+----------------+----------+----------+----------+----------+
 ; From Clock     ; To Clock       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------+----------------+----------+----------+----------+----------+
-; clk            ; clk            ; 100      ; 0        ; 0        ; 0        ;
+; clk            ; clk            ; 5781     ; 0        ; 0        ; 0        ;
 ; divf:u1_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
-; divf:u1_1|clkl ; divf:u1_1|clkl ; 215      ; 0        ; 0        ; 0        ;
+; divf:u2_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u3_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u4_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u5_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u6_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u7_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u8_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u9_1|clkl ; clk            ; 1        ; 1        ; 0        ; 0        ;
+; divf:u1_1|clkl ; divf:u1_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u2_1|clkl ; divf:u2_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u3_1|clkl ; divf:u3_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u4_1|clkl ; divf:u4_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u5_1|clkl ; divf:u5_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u6_1|clkl ; divf:u6_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u7_1|clkl ; divf:u7_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u8_1|clkl ; divf:u8_1|clkl ; 135      ; 0        ; 0        ; 0        ;
+; divf:u9_1|clkl ; divf:u9_1|clkl ; 135      ; 0        ; 0        ; 0        ;
 +----------------+----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -433,6 +579,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------------+----------------+------+-------------+
 ; clk            ; clk            ; Base ; Constrained ;
 ; divf:u1_1|clkl ; divf:u1_1|clkl ; Base ; Constrained ;
+; divf:u2_1|clkl ; divf:u2_1|clkl ; Base ; Constrained ;
+; divf:u3_1|clkl ; divf:u3_1|clkl ; Base ; Constrained ;
+; divf:u4_1|clkl ; divf:u4_1|clkl ; Base ; Constrained ;
+; divf:u5_1|clkl ; divf:u5_1|clkl ; Base ; Constrained ;
+; divf:u6_1|clkl ; divf:u6_1|clkl ; Base ; Constrained ;
+; divf:u7_1|clkl ; divf:u7_1|clkl ; Base ; Constrained ;
+; divf:u8_1|clkl ; divf:u8_1|clkl ; Base ; Constrained ;
+; divf:u9_1|clkl ; divf:u9_1|clkl ; Base ; Constrained ;
 +----------------+----------------+------+-------------+
 
 
@@ -476,7 +630,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 25 16:32:59 2023
+    Info: Processing started: Sat Mar 25 17:01:48 2023
 Info: Command: quartus_sta PWM -c PWM
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -488,76 +642,156 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name divf:u1_1|clkl divf:u1_1|clkl
     Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name divf:u2_1|clkl divf:u2_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u3_1|clkl divf:u3_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u4_1|clkl divf:u4_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u5_1|clkl divf:u5_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u6_1|clkl divf:u6_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u7_1|clkl divf:u7_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u8_1|clkl divf:u8_1|clkl
+    Info (332105): create_clock -period 1.000 -name divf:u9_1|clkl divf:u9_1|clkl
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.545
+Info (332146): Worst-case setup slack is -5.126
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.545             -14.692 clk 
-    Info (332119):    -1.742             -23.622 divf:u1_1|clkl 
-Info (332146): Worst-case hold slack is 0.651
+    Info (332119):    -5.126            -492.096 clk 
+    Info (332119):    -2.067             -16.466 divf:u4_1|clkl 
+    Info (332119):    -2.043             -15.824 divf:u7_1|clkl 
+    Info (332119):    -1.891             -15.653 divf:u2_1|clkl 
+    Info (332119):    -1.877             -15.929 divf:u3_1|clkl 
+    Info (332119):    -1.877             -15.202 divf:u9_1|clkl 
+    Info (332119):    -1.872             -15.407 divf:u6_1|clkl 
+    Info (332119):    -1.806             -15.417 divf:u1_1|clkl 
+    Info (332119):    -1.795             -14.628 divf:u8_1|clkl 
+    Info (332119):    -1.740             -14.568 divf:u5_1|clkl 
+Info (332146): Worst-case hold slack is 0.627
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.651               0.000 divf:u1_1|clkl 
-    Info (332119):     0.652               0.000 clk 
+    Info (332119):     0.627               0.000 clk 
+    Info (332119):     0.633               0.000 divf:u4_1|clkl 
+    Info (332119):     0.646               0.000 divf:u6_1|clkl 
+    Info (332119):     0.646               0.000 divf:u7_1|clkl 
+    Info (332119):     0.650               0.000 divf:u1_1|clkl 
+    Info (332119):     0.650               0.000 divf:u2_1|clkl 
+    Info (332119):     0.650               0.000 divf:u3_1|clkl 
+    Info (332119):     0.651               0.000 divf:u8_1|clkl 
+    Info (332119):     0.654               0.000 divf:u5_1|clkl 
+    Info (332119):     0.659               0.000 divf:u9_1|clkl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -15.627 clk 
-    Info (332119):    -1.403             -26.657 divf:u1_1|clkl 
+    Info (332119):    -3.000            -342.526 clk 
+    Info (332119):    -1.403             -15.433 divf:u1_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u2_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u3_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u4_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u5_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u6_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u7_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u8_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u9_1|clkl 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.196
+Info (332146): Worst-case setup slack is -4.686
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.196             -12.718 clk 
-    Info (332119):    -1.533             -19.913 divf:u1_1|clkl 
-Info (332146): Worst-case hold slack is 0.605
+    Info (332119):    -4.686            -426.146 clk 
+    Info (332119):    -1.796             -13.944 divf:u4_1|clkl 
+    Info (332119):    -1.768             -13.436 divf:u7_1|clkl 
+    Info (332119):    -1.646             -13.621 divf:u3_1|clkl 
+    Info (332119):    -1.643             -13.449 divf:u2_1|clkl 
+    Info (332119):    -1.602             -12.935 divf:u6_1|clkl 
+    Info (332119):    -1.598             -12.771 divf:u9_1|clkl 
+    Info (332119):    -1.582             -13.262 divf:u1_1|clkl 
+    Info (332119):    -1.574             -12.476 divf:u8_1|clkl 
+    Info (332119):    -1.501             -12.205 divf:u5_1|clkl 
+Info (332146): Worst-case hold slack is 0.581
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.581               0.000 clk 
+    Info (332119):     0.595               0.000 divf:u4_1|clkl 
+    Info (332119):     0.597               0.000 divf:u7_1|clkl 
+    Info (332119):     0.598               0.000 divf:u6_1|clkl 
+    Info (332119):     0.604               0.000 divf:u2_1|clkl 
     Info (332119):     0.605               0.000 divf:u1_1|clkl 
-    Info (332119):     0.606               0.000 clk 
+    Info (332119):     0.605               0.000 divf:u3_1|clkl 
+    Info (332119):     0.605               0.000 divf:u5_1|clkl 
+    Info (332119):     0.605               0.000 divf:u8_1|clkl 
+    Info (332119):     0.613               0.000 divf:u9_1|clkl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -15.627 clk 
-    Info (332119):    -1.403             -26.657 divf:u1_1|clkl 
+    Info (332119):    -3.000            -342.526 clk 
+    Info (332119):    -1.403             -15.433 divf:u1_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u2_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u3_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u4_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u5_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u6_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u7_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u8_1|clkl 
+    Info (332119):    -1.403             -15.433 divf:u9_1|clkl 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.035
+Info (332146): Worst-case setup slack is -1.701
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.035              -1.209 clk 
-    Info (332119):    -0.169              -0.552 divf:u1_1|clkl 
-Info (332146): Worst-case hold slack is 0.251
+    Info (332119):    -1.701             -69.751 clk 
+    Info (332119):    -0.279              -1.263 divf:u4_1|clkl 
+    Info (332119):    -0.253              -0.996 divf:u7_1|clkl 
+    Info (332119):    -0.243              -0.976 divf:u6_1|clkl 
+    Info (332119):    -0.237              -0.736 divf:u9_1|clkl 
+    Info (332119):    -0.215              -0.739 divf:u8_1|clkl 
+    Info (332119):    -0.199              -0.906 divf:u3_1|clkl 
+    Info (332119):    -0.166              -0.707 divf:u2_1|clkl 
+    Info (332119):    -0.161              -0.420 divf:u5_1|clkl 
+    Info (332119):    -0.138              -0.608 divf:u1_1|clkl 
+Info (332146): Worst-case hold slack is 0.242
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.251               0.000 clk 
-    Info (332119):     0.252               0.000 divf:u1_1|clkl 
+    Info (332119):     0.242               0.000 clk 
+    Info (332119):     0.249               0.000 divf:u4_1|clkl 
+    Info (332119):     0.251               0.000 divf:u1_1|clkl 
+    Info (332119):     0.251               0.000 divf:u2_1|clkl 
+    Info (332119):     0.251               0.000 divf:u7_1|clkl 
+    Info (332119):     0.252               0.000 divf:u3_1|clkl 
+    Info (332119):     0.252               0.000 divf:u6_1|clkl 
+    Info (332119):     0.252               0.000 divf:u8_1|clkl 
+    Info (332119):     0.254               0.000 divf:u5_1|clkl 
+    Info (332119):     0.255               0.000 divf:u9_1|clkl 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -12.324 clk 
-    Info (332119):    -1.000             -19.000 divf:u1_1|clkl 
+    Info (332119):    -3.000            -253.405 clk 
+    Info (332119):    -1.000             -11.000 divf:u1_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u2_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u3_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u4_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u5_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u6_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u7_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u8_1|clkl 
+    Info (332119):    -1.000             -11.000 divf:u9_1|clkl 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Sat Mar 25 16:33:02 2023
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Sat Mar 25 17:01:51 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
