@@ -1,13 +1,13 @@
-|PWM
-clk => divf:u1_1.clk
-clk => divf:u2_1.clk
-clk => divf:u3_1.clk
-clk => divf:u4_1.clk
-clk => divf:u5_1.clk
-clk => divf:u6_1.clk
-clk => divf:u7_1.clk
-clk => divf:u8_1.clk
-clk => divf:u9_1.clk
+|pwm
+clk => senal:u1_2.clk
+clk => senal:u2_2.clk
+clk => senal:u3_2.clk
+clk => senal:u4_2.clk
+clk => senal:u5_2.clk
+clk => senal:u6_2.clk
+clk => senal:u7_2.clk
+clk => senal:u8_2.clk
+clk => senal:u9_2.clk
 led[0] <= senal:u1_2.snl
 led[1] <= senal:u2_2.snl
 led[2] <= senal:u3_2.snl
@@ -19,36 +19,7 @@ led[7] <= senal:u8_2.snl
 led[8] <= senal:u9_2.snl
 
 
-|PWM|divf:u1_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u1_2
+|pwm|senal:u1_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -95,37 +66,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u2_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u2_2
+|pwm|senal:u2_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -172,37 +113,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u3_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u3_2
+|pwm|senal:u3_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -249,38 +160,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u4_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clk => conteo[25].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u4_2
+|pwm|senal:u4_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -327,38 +207,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u5_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clk => conteo[25].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u5_2
+|pwm|senal:u5_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -405,38 +254,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u6_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clk => conteo[25].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u6_2
+|pwm|senal:u6_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -483,39 +301,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u7_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clk => conteo[25].CLK
-clk => conteo[26].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u7_2
+|pwm|senal:u7_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -562,39 +348,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u8_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clk => conteo[25].CLK
-clk => conteo[26].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u8_2
+|pwm|senal:u8_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK
@@ -641,39 +395,7 @@ duty[31] => LessThan0.IN23
 snl <= snl~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PWM|divf:u9_1
-clk => clkl~reg0.CLK
-clk => conteo[0].CLK
-clk => conteo[1].CLK
-clk => conteo[2].CLK
-clk => conteo[3].CLK
-clk => conteo[4].CLK
-clk => conteo[5].CLK
-clk => conteo[6].CLK
-clk => conteo[7].CLK
-clk => conteo[8].CLK
-clk => conteo[9].CLK
-clk => conteo[10].CLK
-clk => conteo[11].CLK
-clk => conteo[12].CLK
-clk => conteo[13].CLK
-clk => conteo[14].CLK
-clk => conteo[15].CLK
-clk => conteo[16].CLK
-clk => conteo[17].CLK
-clk => conteo[18].CLK
-clk => conteo[19].CLK
-clk => conteo[20].CLK
-clk => conteo[21].CLK
-clk => conteo[22].CLK
-clk => conteo[23].CLK
-clk => conteo[24].CLK
-clk => conteo[25].CLK
-clk => conteo[26].CLK
-clkl <= clkl~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|PWM|senal:u9_2
+|pwm|senal:u9_2
 clk => conteo[0].CLK
 clk => conteo[1].CLK
 clk => conteo[2].CLK

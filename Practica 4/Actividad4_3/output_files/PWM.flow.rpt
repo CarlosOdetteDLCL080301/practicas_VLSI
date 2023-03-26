@@ -1,5 +1,5 @@
 Flow report for PWM
-Sat Mar 25 17:01:51 2023
+Sun Mar 26 08:57:40 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 25 17:01:47 2023       ;
+; Flow Status                        ; Successful - Sun Mar 26 08:57:37 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; PWM                                         ;
 ; Top-level Entity Name              ; pwm                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 614 / 49,760 ( 1 % )                        ;
-;     Total combinational functions  ; 605 / 49,760 ( 1 % )                        ;
-;     Dedicated logic registers      ; 341 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 341                                         ;
+; Total logic elements               ; 48 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 48 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 19 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 19                                          ;
 ; Total pins                         ; 10 / 360 ( 3 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/25/2023 17:01:16 ;
+; Start date & time ; 03/26/2023 08:57:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PWM                 ;
 +-------------------+---------------------+
@@ -77,12 +77,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 233497585920808.167978527603564        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 233497585920808.167984263001316        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; pwm         ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; pwm         ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; pwm         ; Top        ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -92,11 +92,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4789 MB             ; 00:00:12                           ;
-; Fitter               ; 00:00:12     ; 1.1                     ; 5639 MB             ; 00:00:08                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4684 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 4819 MB             ; 00:00:01                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:23                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4789 MB             ; 00:00:13                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5633 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4681 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4815 MB             ; 00:00:02                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:26                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

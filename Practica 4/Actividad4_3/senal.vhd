@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity senal is
 	port(
 		clk:in std_logic;
-		duty:in integer;
+		duty:in integer:=100;
 		snl:out std_logic
 	);
 end entity;
@@ -14,11 +14,11 @@ architecture arq_senal of senal is
 	begin
 		process(clk)
 			begin
-			if(rising_edge(clk)) then
+			if(rising_edge(clk)) then		
 				if(conteo<=duty) then
-					snl<='1';
+					snl <= '1';
 				else
-					snl<='0';
+					snl <= '0';
 				end if;
 				
 				if(conteo=1000) then

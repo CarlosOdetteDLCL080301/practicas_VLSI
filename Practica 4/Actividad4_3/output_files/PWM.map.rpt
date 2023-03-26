@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PWM
-Sat Mar 25 17:01:29 2023
+Sun Mar 26 08:57:22 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,28 +13,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: divf:u1_1
- 10. Parameter Settings for User Entity Instance: divf:u2_1
- 11. Parameter Settings for User Entity Instance: divf:u3_1
- 12. Parameter Settings for User Entity Instance: divf:u4_1
- 13. Parameter Settings for User Entity Instance: divf:u5_1
- 14. Parameter Settings for User Entity Instance: divf:u6_1
- 15. Parameter Settings for User Entity Instance: divf:u7_1
- 16. Parameter Settings for User Entity Instance: divf:u8_1
- 17. Parameter Settings for User Entity Instance: divf:u9_1
- 18. Port Connectivity Checks: "senal:u9_2"
- 19. Port Connectivity Checks: "senal:u8_2"
- 20. Port Connectivity Checks: "senal:u7_2"
- 21. Port Connectivity Checks: "senal:u6_2"
- 22. Port Connectivity Checks: "senal:u5_2"
- 23. Port Connectivity Checks: "senal:u4_2"
- 24. Port Connectivity Checks: "senal:u3_2"
- 25. Port Connectivity Checks: "senal:u2_2"
- 26. Port Connectivity Checks: "senal:u1_2"
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |pwm
+ 11. Port Connectivity Checks: "senal:u9_2"
+ 12. Port Connectivity Checks: "senal:u8_2"
+ 13. Port Connectivity Checks: "senal:u7_2"
+ 14. Port Connectivity Checks: "senal:u6_2"
+ 15. Port Connectivity Checks: "senal:u5_2"
+ 16. Port Connectivity Checks: "senal:u4_2"
+ 17. Port Connectivity Checks: "senal:u3_2"
+ 18. Port Connectivity Checks: "senal:u2_2"
+ 19. Port Connectivity Checks: "senal:u1_2"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -60,15 +53,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 25 17:01:29 2023       ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 26 08:57:22 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; PWM                                         ;
 ; Top-level Entity Name              ; pwm                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 604                                         ;
-;     Total combinational functions  ; 604                                         ;
-;     Dedicated logic registers      ; 341                                         ;
-; Total registers                    ; 341                                         ;
+; Total logic elements               ; 47                                          ;
+;     Total combinational functions  ; 47                                          ;
+;     Dedicated logic registers      ; 19                                          ;
+; Total registers                    ; 19                                          ;
 ; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -85,7 +78,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; PWM                ; PWM                ;
+; Top-level entity name                                            ; pwm                ; PWM                ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -178,8 +171,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -190,7 +182,6 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 ; pwm.vhd                          ; yes             ; User VHDL File  ; F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd   ;         ;
 ; senal.vhd                        ; yes             ; User VHDL File  ; F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/senal.vhd ;         ;
-; divf.vhd                         ; yes             ; User VHDL File  ; F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/divf.vhd  ;         ;
 +----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -199,20 +190,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 604       ;
+; Estimated Total logic elements              ; 47        ;
 ;                                             ;           ;
-; Total combinational functions               ; 604       ;
+; Total combinational functions               ; 47        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 160       ;
-;     -- 3 input functions                    ; 36        ;
-;     -- <=2 input functions                  ; 408       ;
+;     -- 4 input functions                    ; 32        ;
+;     -- 3 input functions                    ; 3         ;
+;     -- <=2 input functions                  ; 12        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 299       ;
-;     -- arithmetic mode                      ; 305       ;
+;     -- normal mode                          ; 38        ;
+;     -- arithmetic mode                      ; 9         ;
 ;                                             ;           ;
-; Total registers                             ; 341       ;
-;     -- Dedicated logic registers            ; 341       ;
+; Total registers                             ; 19        ;
+;     -- Dedicated logic registers            ; 19        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 10        ;
@@ -220,9 +211,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 242       ;
-; Total fan-out                               ; 2247      ;
-; Average fan-out                             ; 2.33      ;
+; Maximum fan-out                             ; 19        ;
+; Total fan-out                               ; 217       ;
+; Average fan-out                             ; 2.52      ;
 +---------------------------------------------+-----------+
 
 
@@ -231,27 +222,107 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |pwm                       ; 604 (0)             ; 341 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 10   ; 0            ; 0          ; |pwm                ; pwm         ; work         ;
-;    |divf:u1_1|             ; 41 (41)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u1_1      ; divf        ; work         ;
-;    |divf:u2_1|             ; 43 (43)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u2_1      ; divf        ; work         ;
-;    |divf:u3_1|             ; 45 (45)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u3_1      ; divf        ; work         ;
-;    |divf:u4_1|             ; 44 (44)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u4_1      ; divf        ; work         ;
-;    |divf:u5_1|             ; 48 (48)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u5_1      ; divf        ; work         ;
-;    |divf:u6_1|             ; 46 (46)             ; 27 (27)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u6_1      ; divf        ; work         ;
-;    |divf:u7_1|             ; 46 (46)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u7_1      ; divf        ; work         ;
-;    |divf:u8_1|             ; 45 (45)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u8_1      ; divf        ; work         ;
-;    |divf:u9_1|             ; 48 (48)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|divf:u9_1      ; divf        ; work         ;
-;    |senal:u1_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u1_2     ; senal       ; work         ;
-;    |senal:u2_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u2_2     ; senal       ; work         ;
-;    |senal:u3_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u3_2     ; senal       ; work         ;
-;    |senal:u4_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u4_2     ; senal       ; work         ;
-;    |senal:u5_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u5_2     ; senal       ; work         ;
-;    |senal:u6_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u6_2     ; senal       ; work         ;
-;    |senal:u7_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u7_2     ; senal       ; work         ;
-;    |senal:u8_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u8_2     ; senal       ; work         ;
-;    |senal:u9_2|            ; 22 (22)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u9_2     ; senal       ; work         ;
+; |pwm                       ; 47 (0)              ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 10   ; 0            ; 0          ; |pwm                ; pwm         ; work         ;
+;    |senal:u1_2|            ; 23 (23)             ; 11 (11)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u1_2     ; senal       ; work         ;
+;    |senal:u2_2|            ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u2_2     ; senal       ; work         ;
+;    |senal:u3_2|            ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u3_2     ; senal       ; work         ;
+;    |senal:u4_2|            ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u4_2     ; senal       ; work         ;
+;    |senal:u5_2|            ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u5_2     ; senal       ; work         ;
+;    |senal:u6_2|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u6_2     ; senal       ; work         ;
+;    |senal:u7_2|            ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u7_2     ; senal       ; work         ;
+;    |senal:u8_2|            ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u8_2     ; senal       ; work         ;
+;    |senal:u9_2|            ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pwm|senal:u9_2     ; senal       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                        ;
++----------------------------------------+----------------------------------+
+; Register name                          ; Reason for Removal               ;
++----------------------------------------+----------------------------------+
+; senal:u2_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u3_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u4_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u5_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u6_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u7_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u8_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u9_2|conteo[9]                   ; Merged with senal:u1_2|conteo[9] ;
+; senal:u2_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u3_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u4_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u5_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u6_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u7_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u8_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u9_2|conteo[8]                   ; Merged with senal:u1_2|conteo[8] ;
+; senal:u2_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u3_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u4_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u5_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u6_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u7_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u8_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u9_2|conteo[7]                   ; Merged with senal:u1_2|conteo[7] ;
+; senal:u2_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u3_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u4_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u5_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u6_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u7_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u8_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u9_2|conteo[6]                   ; Merged with senal:u1_2|conteo[6] ;
+; senal:u2_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u3_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u4_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u5_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u6_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u7_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u8_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u9_2|conteo[5]                   ; Merged with senal:u1_2|conteo[5] ;
+; senal:u2_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u3_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u4_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u5_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u6_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u7_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u8_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u9_2|conteo[4]                   ; Merged with senal:u1_2|conteo[4] ;
+; senal:u2_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u3_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u4_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u5_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u6_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u7_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u8_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u9_2|conteo[3]                   ; Merged with senal:u1_2|conteo[3] ;
+; senal:u2_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u3_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u4_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u5_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u6_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u7_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u8_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u9_2|conteo[2]                   ; Merged with senal:u1_2|conteo[2] ;
+; senal:u2_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u3_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u4_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u5_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u6_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u7_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u8_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u9_2|conteo[1]                   ; Merged with senal:u1_2|conteo[1] ;
+; senal:u2_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u3_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u4_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u5_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u6_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u7_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u8_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; senal:u9_2|conteo[0]                   ; Merged with senal:u1_2|conteo[0] ;
+; Total Number of Removed Registers = 80 ;                                  ;
++----------------------------------------+----------------------------------+
 
 
 +------------------------------------------------------+
@@ -259,7 +330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 341   ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -269,93 +340,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u1_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 10000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u2_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 20000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u3_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 30000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u4_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 40000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u5_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 50000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u6_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 60000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u7_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 70000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u8_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 80000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; Parameter Settings for User Entity Instance: divf:u9_1 ;
-+----------------+----------+----------------------------+
-; Parameter Name ; Value    ; Type                       ;
-+----------------+----------+----------------------------+
-; num            ; 90000000 ; Signed Integer             ;
-+----------------+----------+----------------------------+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |pwm ;
++----------------+----------+-----------------------------------------+
+; Parameter Name ; Value    ; Type                                    ;
++----------------+----------+-----------------------------------------+
+; num            ; 25000000 ; Signed Integer                          ;
++----------------+----------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -364,9 +355,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
+; duty[5..4]  ; Input ; Info     ; Stuck at VCC ;
+; duty[31..6] ; Input ; Info     ; Stuck at GND ;
+; duty[3..2]  ; Input ; Info     ; Stuck at GND ;
 ; duty[1]     ; Input ; Info     ; Stuck at VCC ;
 ; duty[0]     ; Input ; Info     ; Stuck at GND ;
 +-------------+-------+----------+--------------+
@@ -377,11 +368,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
+; duty[6..5]  ; Input ; Info     ; Stuck at VCC ;
+; duty[31..7] ; Input ; Info     ; Stuck at GND ;
+; duty[4..3]  ; Input ; Info     ; Stuck at GND ;
+; duty[1..0]  ; Input ; Info     ; Stuck at GND ;
+; duty[2]     ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
 
 
@@ -390,10 +381,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
+; duty[2..1]  ; Input ; Info     ; Stuck at VCC ;
 ; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
+; duty[6..5]  ; Input ; Info     ; Stuck at GND ;
+; duty[7]     ; Input ; Info     ; Stuck at VCC ;
+; duty[4]     ; Input ; Info     ; Stuck at VCC ;
+; duty[3]     ; Input ; Info     ; Stuck at GND ;
 ; duty[0]     ; Input ; Info     ; Stuck at GND ;
 +-------------+-------+----------+--------------+
 
@@ -403,11 +396,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
+; duty[7..6]  ; Input ; Info     ; Stuck at VCC ;
 ; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
+; duty[5..4]  ; Input ; Info     ; Stuck at GND ;
+; duty[2..0]  ; Input ; Info     ; Stuck at GND ;
+; duty[3]     ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
 
 
@@ -416,64 +409,74 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
+; duty[8..4]  ; Input ; Info     ; Stuck at VCC ;
+; duty[31..9] ; Input ; Info     ; Stuck at GND ;
+; duty[1..0]  ; Input ; Info     ; Stuck at GND ;
+; duty[3]     ; Input ; Info     ; Stuck at GND ;
+; duty[2]     ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "senal:u4_2"        ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++------------------------------------------------+
+; Port Connectivity Checks: "senal:u4_2"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; duty[4..3]   ; Input ; Info     ; Stuck at VCC ;
+; duty[31..10] ; Input ; Info     ; Stuck at GND ;
+; duty[8..7]   ; Input ; Info     ; Stuck at GND ;
+; duty[2..0]   ; Input ; Info     ; Stuck at GND ;
+; duty[9]      ; Input ; Info     ; Stuck at VCC ;
+; duty[6]      ; Input ; Info     ; Stuck at VCC ;
+; duty[5]      ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "senal:u3_2"        ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++------------------------------------------------+
+; Port Connectivity Checks: "senal:u3_2"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; duty[31..10] ; Input ; Info     ; Stuck at GND ;
+; duty[6..4]   ; Input ; Info     ; Stuck at GND ;
+; duty[9]      ; Input ; Info     ; Stuck at VCC ;
+; duty[8]      ; Input ; Info     ; Stuck at GND ;
+; duty[7]      ; Input ; Info     ; Stuck at VCC ;
+; duty[3]      ; Input ; Info     ; Stuck at VCC ;
+; duty[2]      ; Input ; Info     ; Stuck at GND ;
+; duty[1]      ; Input ; Info     ; Stuck at VCC ;
+; duty[0]      ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "senal:u2_2"        ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++------------------------------------------------+
+; Port Connectivity Checks: "senal:u2_2"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; duty[5..2]   ; Input ; Info     ; Stuck at VCC ;
+; duty[31..10] ; Input ; Info     ; Stuck at GND ;
+; duty[1..0]   ; Input ; Info     ; Stuck at GND ;
+; duty[9]      ; Input ; Info     ; Stuck at VCC ;
+; duty[8]      ; Input ; Info     ; Stuck at GND ;
+; duty[7]      ; Input ; Info     ; Stuck at VCC ;
+; duty[6]      ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "senal:u1_2"        ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; duty[7..3]  ; Input ; Info     ; Stuck at VCC ;
-; duty[31..8] ; Input ; Info     ; Stuck at GND ;
-; duty[2]     ; Input ; Info     ; Stuck at GND ;
-; duty[1]     ; Input ; Info     ; Stuck at VCC ;
-; duty[0]     ; Input ; Info     ; Stuck at GND ;
-+-------------+-------+----------+--------------+
++------------------------------------------------+
+; Port Connectivity Checks: "senal:u1_2"         ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; duty[7..5]   ; Input ; Info     ; Stuck at VCC ;
+; duty[3..1]   ; Input ; Info     ; Stuck at VCC ;
+; duty[31..10] ; Input ; Info     ; Stuck at GND ;
+; duty[9]      ; Input ; Info     ; Stuck at VCC ;
+; duty[8]      ; Input ; Info     ; Stuck at GND ;
+; duty[4]      ; Input ; Info     ; Stuck at GND ;
+; duty[0]      ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -482,19 +485,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 341                         ;
-;     plain             ; 341                         ;
-; cycloneiii_lcell_comb ; 604                         ;
-;     arith             ; 305                         ;
-;         2 data inputs ; 305                         ;
-;     normal            ; 299                         ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 85                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 160                         ;
+; cycloneiii_ff         ; 19                          ;
+;     plain             ; 19                          ;
+; cycloneiii_lcell_comb ; 47                          ;
+;     arith             ; 9                           ;
+;         2 data inputs ; 9                           ;
+;     normal            ; 38                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.60                        ;
-; Average LUT depth     ; 3.20                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -503,7 +506,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -513,12 +516,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Mar 25 17:01:16 2023
+    Info: Processing started: Sun Mar 26 08:57:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PWM -c PWM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pwm.vhd
-    Info (12022): Found design unit 1: pwm-arq_pwm File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 11
+    Info (12022): Found design unit 1: pwm-arq_pwm File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 14
     Info (12023): Found entity 1: pwm File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file senal.vhd
     Info (12022): Found design unit 1: senal-arq_senal File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/senal.vhd Line: 12
@@ -526,28 +529,19 @@ Info (12021): Found 2 design units, including 1 entities, in source file senal.v
 Info (12021): Found 2 design units, including 1 entities, in source file divf.vhd
     Info (12022): Found design unit 1: divf-arq_divf File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/divf.vhd Line: 14
     Info (12023): Found entity 1: divf File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/divf.vhd Line: 4
-Info (12127): Elaborating entity "PWM" for the top level hierarchy
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u1_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 14
-Info (12129): Elaborating entity "senal" using architecture "A:arq_senal" for hierarchy "senal:u1_2" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 15
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u2_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 16
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u3_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 18
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u4_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 20
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u5_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 22
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u6_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 24
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u7_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 26
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u8_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 28
-Info (12129): Elaborating entity "divf" using architecture "A:arq_divf" for hierarchy "divf:u9_1" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 30
+Info (12127): Elaborating entity "pwm" for the top level hierarchy
+Info (12129): Elaborating entity "senal" using architecture "A:arq_senal" for hierarchy "senal:u1_2" File: F:/Users/Carlos Odettte DLCL/Documentos/VLSI/Practica 4/Actividad4_3/pwm.vhd Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 614 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 604 logic cells
+    Info (21061): Implemented 47 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Sat Mar 25 17:01:29 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Processing ended: Sun Mar 26 08:57:22 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 
